@@ -12,6 +12,18 @@ public class Main {
 		myHuawei.call();
 		System.out.println(Huawei.BRAND);
 		
+		// Find the cheapest		
+		Phone[] myPhones = {myApple, mySamsung, myHuawei};
+		int min = 10000;
+		int cheapIndex = 0;
+		for (int i = 0; i < myPhones.length; i++) {
+			if (myPhones[i].price < min) {
+				min = myPhones[i].price;
+				cheapIndex = i;
+			}
+		}
+		System.out.println("The Cheapest Phone is " + myPhones[cheapIndex].model);
+		
 	}
 
 }
